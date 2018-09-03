@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<ctime>
 #include<iomanip>
 using namespace std;
@@ -13,7 +13,6 @@ void sort(int*, int*, const int);
 void sort_key(int *[], const int);
 void sort_number(int *[], const int);
 
-
 void add(int *p[], int& s)
 {
 	int *k = p[0];
@@ -23,9 +22,9 @@ void add(int *p[], int& s)
 	copy(k, k_add, s - 1);
 	copy(n, n_add, s - 1);
 	int key, number;
-	cout << "Ââåäèòå êîä ãîðîäà : ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð´ Ð³Ð¾Ñ€Ð¾Ð´Ð° : ";
 	cin >> key;
-	cout << "Ââåäèòå íîìåð òåëåôîíà : ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ Ñ‚ÐµÐ»ÐµÑ„Ð¾Ð½Ð° : ";
 	cin >> number;
 	cout << "\n";
 	*(k_add + s - 1) = key;
@@ -45,9 +44,9 @@ int find(int *p[], const int s)
 	int *k = p[0];
 	int *n = p[1];
 	int key, number;
-	cout << "Ââåäèòå êîä ãîðîäà : ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð´ Ð³Ð¾Ñ€Ð¾Ð´Ð° : ";
 	cin >> key;
-	cout << "Ââåäèòå íîìåð òåëåôîíà : ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ Ñ‚ÐµÐ»ÐµÑ„Ð¾Ð½Ð° : ";
 	cin >> number;
 	cout << "\n";
 	for (int i = 0; i < s; i++)
@@ -59,7 +58,7 @@ int find(int *p[], const int s)
 
 void out(int *p[], const int s)
 {
-	cout << "Êîä Òåëåôîí\n";
+	cout << "ÐšÐ¾Ð´ Ð¢ÐµÐ»ÐµÑ„Ð¾Ð½\n";
 	for (int i = 0; i < s; i++)
 	{
 		cout << setw(3) << p[0][i];
@@ -105,7 +104,7 @@ void remove(int *p[], int& s)
 		p[1] = n_new;
 	}
 	else
-		cout << "Òàêîãî íîìåðà íåò\n";
+		cout << "Ð¢Ð°ÐºÐ¾Ð³Ð¾ Ð½Ð¾Ð¼ÐµÑ€Ð° Ð½ÐµÑ‚\n";
 
 }
 
@@ -168,8 +167,8 @@ int main()
 	{
 		int c;
 		
-		cout << "Âûáåðèòå äåéñòâèå :\n1 - ïîèñê ïî íîìåðó\n2 - äîáàâèòü íîìåð\n3 - óäàëèòü íîìåð"
-			<< "\n4 - ñîðòèðîâêà ïî êîäó ãîðîäà\n5 - ñîðòèðîâêà ïî íîìåðó\n6 - âûõîä\n";
+		cout << "Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ðµ :\n1 - Ð¿Ð¾Ð¸ÑÐº Ð¿Ð¾ Ð½Ð¾Ð¼ÐµÑ€Ñƒ\n2 - Ð´Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ Ð½Ð¾Ð¼ÐµÑ€\n3 - ÑƒÐ´Ð°Ð»Ð¸Ñ‚ÑŒ Ð½Ð¾Ð¼ÐµÑ€"
+			<< "\n4 - ÑÐ¾Ñ€Ñ‚Ð¸Ñ€Ð¾Ð²ÐºÐ° Ð¿Ð¾ ÐºÐ¾Ð´Ñƒ Ð³Ð¾Ñ€Ð¾Ð´Ð°\n5 - ÑÐ¾Ñ€Ñ‚Ð¸Ñ€Ð¾Ð²ÐºÐ° Ð¿Ð¾ Ð½Ð¾Ð¼ÐµÑ€Ñƒ\n6 - Ð²Ñ‹Ñ…Ð¾Ð´\n";
 		cin >> c;
 		switch (c)
 		{
@@ -177,8 +176,8 @@ int main()
 		{
 			int n = find(masP, nSize);
 			if (n > -1)
-				cout << "Ââåäåííûé íîìåð â ñïèñêå íà " << n + 1 << " ìåñòå\n";
-			else cout << "Òàêîãî íîìåðà â ñïèñêå íåò\n";
+				cout << "Ð’Ð²ÐµÐ´ÐµÐ½Ð½Ñ‹Ð¹ Ð½Ð¾Ð¼ÐµÑ€ Ð² ÑÐ¿Ð¸ÑÐºÐµ Ð½Ð° " << n + 1 << " Ð¼ÐµÑÑ‚Ðµ\n";
+			else cout << "Ð¢Ð°ÐºÐ¾Ð³Ð¾ Ð½Ð¾Ð¼ÐµÑ€Ð° Ð² ÑÐ¿Ð¸ÑÐºÐµ Ð½ÐµÑ‚\n";
 		}
 		break;
 		case 2: 
@@ -208,7 +207,7 @@ int main()
 			break;
 		case 6: f = false;
 			break;
-		default: cout << "Íåêîððåêòíûé ââîä\n";
+		default: cout << "ÐÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ñ‹Ð¹ Ð²Ð²Ð¾Ð´\n";
 			break;
 		}
 	}
